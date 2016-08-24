@@ -1,11 +1,11 @@
-# txly_blog
-## Flask²©¿ÍÏîÄ¿ 
+ï»¿# txly_blog
+## Flaskåšå®¢é¡¹ç›® 
 
 
 A lightweight blog.
 
 """
-¿ª·¢»·¾³£º
+å¼€å‘ç¯å¢ƒï¼š
 -- Python
 -- Flask
 -- Mongodb
