@@ -4,11 +4,11 @@
 
 A lightweight blog.
 
-"""
+```html
 开发环境：
--- Python
--- Flask
--- Mongodb
--- HTML,CSS,JS
-"""
+- Python
+- Flask
+- Mongodb
+- HTML,CSS,JS
+```
 
