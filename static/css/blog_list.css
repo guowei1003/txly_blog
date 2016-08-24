@@ -1,0 +1,13 @@
+
+#cloud-nice{
+    background-color: #326696;
+    overflow: hidden;
+    font-family:"Monospace";
+    font-size:13px;
+    text-align:center;
+    font-weight: bold;
+    position: absolute;
+    top:0;
+    /*bottom: 124px;*/
+    z-index: 10;
+}

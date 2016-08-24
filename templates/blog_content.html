@@ -1,0 +1,72 @@
+{% extends "common/base.html" %}
+
+{% block css1 %}
+    <link rel="stylesheet" href="/static/css/blog_content.css" />
+{% endblock %}
+
+{#注释部分为云层动态效果，需要时，将注释解开，同时还要将css中的注释解开#}
+{% block javascript1 %}
+    <script type="text/javascript" src="/static/js/blog_content.js"></script>
+{% endblock %}
+
+{% block header %}
+    <div class="header">
+        <div class="header-top ui-Xlarge">
+            <div class="header-logo uk-float-left">
+                <img src="/static/images/author.png" alt="作者logo">
+            </div>
+            <div class="header-datetime uk-float-right"><span id="update-time"></span></div>
+            <div class="uk-navbar-center">
+                a|baaaa
+            </div>
+            {#    <div class="header-weather uk-float-right">1</div>#}
+        </div>
+        <div class="header-nav">
+            <div class="header-nav-brand">
+                <img src="/static/images/logo-144x144.ico" alt="logo">
+            </div>
+            <div class="header-nav-title" id="cloud-nice">
+                <h1>沙发沙发沙发沙发大师傅</h1>
+            </div>
+        </div>
+        <div class="header-breadcrumb">
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+{% block extra %}
+    <script type="text/javascript" src="/static/js/three.min.js"></script>
+    <script type="text/javascript" src="/static/js/Detector.js"></script>
+    <script id="vs" type="x-shader/x-vertex">
+        varying vec2 vUv;
+        void main() {
+            vUv = uv;
+            gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+        }
+    </script>
+    <script id="fs" type="x-shader/x-fragment">
+
+        uniform sampler2D map;
+
+        uniform vec3 fogColor;
+        uniform float fogNear;
+        uniform float fogFar;
+
+        varying vec2 vUv;
+
+        void main() {
+
+            float depth = gl_FragCoord.z / gl_FragCoord.w;
+            float fogFactor = smoothstep( fogNear, fogFar, depth );
+
+            gl_FragColor = texture2D( map, vUv );
+            gl_FragColor.w *= pow( gl_FragCoord.z, 20.0 );
+            gl_FragColor = mix( gl_FragColor, vec4( fogColor, gl_FragColor.w ), fogFactor );
+
+        }
+
+    </script>
+    <script type="text/javascript" src="/static/js/banner_cloud.js"></script>
+{% endblock %}

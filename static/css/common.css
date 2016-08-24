@@ -1,0 +1,86 @@
+
+body{
+    background: #f8f8f8 url("/static/images/background.gif") repeat scroll left top;
+    min-height: 500px;
+}
+/*网页头*/
+.header-top{
+    width: 100%;
+    height: 20px;
+    background-color: red;
+    border-bottom: #FFFFFF solid 1px;
+    -webkit-box-shadow: 0 1px 3px #000000;
+    -moz-box-shadow: 0 1px 3px #000000;
+    box-shadow: 0 1px 3px #000000;
+    position: relative;
+    z-index: 1000;
+}
+/*logo*/
+.header-logo img{
+    height: 20px;
+}
+/*当前时间*/
+#update-time{
+    width: 200px;
+    display: inline-block;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 1px #000000;
+}
+/*导航配置*/
+.header-nav{
+    margin: 0 auto;
+    max-width: 1187px;
+    height: 200px;
+    border-top: 2px solid #FF0000;
+    border-right: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    border-left: 1px solid #FFFFFF;
+    border-radius:0 0 5px 5px;
+    position: relative;
+    bottom: 2px;
+    background: none;
+    -webkit-box-shadow: 0 3px 3px #000000;
+    -moz-box-shadow: 0 3px 3px #000000;
+    box-shadow: 0 3px 3px #000000;
+    z-index: 1000;
+}
+.header-nav-brand img{
+    margin: 5px;
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    -webkit-box-shadow: 0 0 3px #FFFFFF;
+    -moz-box-shadow: 0 0 3px #FFFFFF;
+    box-shadow: 0 0 3px #FFFFFF;
+}
+
+.header-nav-title, .header-nav-brand{
+    margin: 45px 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.header-nav-title h1{
+    margin: 0;
+    color:#FFFFFF;
+    text-shadow: 0 0 1px #000000;
+}
+.header-breadcrumb{
+    margin: 30px auto;
+    padding-left: 20px;
+    max-width: 1187px;
+    position: relative;
+    z-index: 1000;
+    text-shadow: 1px 1px 1px #000000;
+    color:#FFFFFF;
+}
+.container{
+    margin: 30px auto 0 auto;
+    padding: 0;
+    max-width: 1187px;
+    height: 1000px;
+    background: #eeeaeb;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 5px #000000;
+    -moz-box-shadow: 0 0 5px #000000;
+    box-shadow: 0 0 5px #000000;
+}

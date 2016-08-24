@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh-CN">
+<head>
+<title>{% block base_title %}{{ title }}{% endblock %}-天向流云的博客</title>
+<!--网站头信息-->
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="zh-CN" />
+<meta name="author" content="guowei.cao" />
+<meta name="Copyright" content="blog.cc8789.net" />
+<meta name="baidu-site-verification" content="IMz3g3lBr4" />
+<meta name="description" content="关于一个程序开发者的博客，以及一些教程" />
+{#<meta http-equiv="refresh" content="10;url=http://www.IceFire.com" />#}
+<meta name="keywords" content="blog 博客 教程 python 开发 IT 互联网 技术"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% block meta %}{% endblock %}
+<link rel="shortcut icon" href="/static/images/logo-32x32.ico" type="image/x-icon" />
+
+<!--**********end**********-->
+{#外部链接块#}
+{#外部CSS和JS引入#}
+{% include 'common/styles.html' %}
+{#额外块设置#}
+{% block css1 %}{% endblock %}
+{% block css2 %}{% endblock %}
+{% block css3 %}{% endblock %}
+
+{% block javascript1 %}{% endblock %}
+{% block javascript2 %}{% endblock %}
+{#**********end************#}
+</head>
+{#页面主内容#}
+<body>
+{% block header %}{% include 'common/header.html' %}{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}{% include 'common/footer.html' %}{% endblock %}
+{% block extra %}{% endblock %}
+</body>
+</html>
